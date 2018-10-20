@@ -2,6 +2,7 @@
 
 import RPi.GPIO as GPIO
 import time
+from time import asctime    # To bring in the current time function.
 
 GPIO.setmode(GPIO.BCM)
 
@@ -16,7 +17,7 @@ try:
             GPIO.output(24, True)
             time.sleep(0.5) # Buzzer turns on for 0.5 sec
             GPIO.output(24, False)
-            print("Motion Detected...")
+            print("Motion detected... " + asctime())
             time.sleep(5) # to avoid multiple detections
         time.sleep(0.1) # loop delay, should be less than detection delay
 
