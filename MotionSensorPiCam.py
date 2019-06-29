@@ -28,7 +28,7 @@ while True:
     GPIO.output(buzzer_pin, False)
     pir.wait_for_no_motion()
     GPIO.output(led_pin, True)
-    GPIO.putput(buzzer_pin, True)
+    GPIO.output(buzzer_pin, True)
     sleep(1)
     GPIO.output(buzzer_pin, False)
     camera.stop_recording()
